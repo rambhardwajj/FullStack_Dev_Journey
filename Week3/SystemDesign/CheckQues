@@ -1,0 +1,5 @@
+Deploying apps :-
+    1. Deploy apps on Vercel or Netlify + cloud for backend/ firebase etc
+    2. Deploy in a way that they auto scale but on native machine 
+    3. Containerised and deployed them natively 
+    4. Deploy using k8s (kubernatives i guess)
