@@ -9,6 +9,7 @@ function AddCourse(){
 
 	const [title , setTitle] = useState("");
 	const [ description, setDescription] = useState("");
+	const [ imageLink , setImageLink] = useState(""); 
 
 	return (<div>
 			<div style={{ display : "flex", justifyContent : 'center'}}>
@@ -34,6 +35,7 @@ function AddCourse(){
 						label="Title" 
 						variant="outlined"/>
 					<br /> <br />
+
 					<TextField 
 						onChange={(e) =>{
 							setDescription( e.target.value);
@@ -41,8 +43,16 @@ function AddCourse(){
 						fullWidth={true}
 						label="Discription" 
 						variant="outlined" />
-					<br />
-					<br />
+					<br /> <br />
+					
+					<TextField 
+						onChange={(e) =>{
+							setImageLink( e.target.value);
+						}}
+						fullWidth={true}
+						label="ImageLink" 
+						variant="outlined" />
+					<br /> <br />
 
 					<Button 
 						size='large' 
@@ -50,7 +60,7 @@ function AddCourse(){
 
 						onClick={()=>{
 							function callback2(data){
-								localStorage.setItem("token", data.token);
+								alert("course Added");
 								console.log(data);
 
 							}
@@ -62,7 +72,7 @@ function AddCourse(){
 								body : JSON.stringify({
 									title : title ,
 									description : description,
-									imageLink : "",
+									imageLink : imageLink,
 									published : true
 								}),
 								headers : {
