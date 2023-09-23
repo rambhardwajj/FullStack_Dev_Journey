@@ -36,7 +36,9 @@ renderShape(
 )
 
 function calculator( a: number, b:number , type : Arthematic)  {
-	console.log(type);
+	console.log(type); // 2 is logged
+	// return Arthematic.Add ; // you can do this
+	// return interface : // no interfaces cant be returned
 }
 
 const ans = calculator( 1, 3, Arthematic.Div);
