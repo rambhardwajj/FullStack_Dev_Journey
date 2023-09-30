@@ -22,7 +22,6 @@ console.log(getFir(["one", "two"]));
 // swap two numbers
 
 function swap<T,U>(a:T, b:U) : [U,T]{
-	
 	return  [b,a];
 }
 
@@ -30,5 +29,7 @@ console.log( swap(1,3));
 console.log( swap("dfs","sdfdsf"));
 console.log( swap("dfs",1));
 
+
+// useState is a great example of generic
 
 

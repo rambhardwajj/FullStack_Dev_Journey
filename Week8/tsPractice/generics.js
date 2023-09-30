@@ -18,3 +18,4 @@ function swap(a, b) {
 console.log(swap(1, 3));
 console.log(swap("dfs", "sdfdsf"));
 console.log(swap("dfs", 1));
+// useState is a great example of generic
