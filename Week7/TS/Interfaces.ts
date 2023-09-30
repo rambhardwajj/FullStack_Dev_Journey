@@ -91,3 +91,18 @@ console.log(capture( {
 		return "bread";
 	}
 }))
+
+// interface can have optional properties as well
+interface Circle {
+	radius : number;
+	borderWidth?: number;
+}
+
+function renderCircle( circle: Circle){
+	console.log( circle.radius);
+}
+
+console.log( renderCircle({
+	radius: 33,
+	borderWidth: 333
+}))
