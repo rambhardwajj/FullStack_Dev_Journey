@@ -1,0 +1,5 @@
+process managers are used to prevent your backend from going down if the users sends some nautorious 
+string in the input section
+the process managers -> forever / pm2
+keeps checking you application that the backend is down or not of its down it restarts your backend 
+this is the bad way of doing backend validation 

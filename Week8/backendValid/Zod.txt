@@ -1,0 +1,5 @@
+Zod is an input validation library .
+Where is it used 
+	It is used where you want to kdo backend validation without writting the rules for it 
+	You just need to define some input validation texture and the rules will be set by Zod .
+	

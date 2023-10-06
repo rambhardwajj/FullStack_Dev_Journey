@@ -1,4 +1,3 @@
-
 // arrays in type script 
 
 type Input = (string | number)[];
