@@ -1,0 +1,5 @@
+any big open source project should not be one folder which have all the files ,
+the problem is when they share any code ,
+just so you dont have to type all the logic again and again in frontend and backend 
+therefore you should create small pacakges that both the frontend and the backend can import from 
+ 
