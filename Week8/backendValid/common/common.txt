@@ -1,5 +1,58 @@
+
 any big open source project should not be one folder which have all the files ,
 the problem is when they share any code ,
 just so you dont have to type all the logic again and again in frontend and backend 
 therefore you should create small pacakges that both the frontend and the backend can import from 
- 
+
+_____________________________________________________________________________________________________________________________
+
+In pre ancient day if you want to import data from server you have to publish your module to npmjs website from there
+anyone can import the modeule you published just by importing from the library using npm i etc etc
+
+How to publish -> signup on npmjs , 
+go to terminal -> npm login
+it will ask you -:
+					username 
+					password
+					email
+
+then in pacakge.json -> "name" : "@uniqueName/common",
+						"main" : "dist/index.js"
+
+finally run 	-> npm publish --access=public
+
+
+to check go to the npmjs website in your profile you can see your publications
+
+
+in terminal -> npm pack 
+		will show you all your publications
+
+
+Now if you dont want some of your files to be published and to be public you can 
+make a file name .npmignore 
+	and write  the file name   you dont want to publish 
+
+But now after changing something in your publication if you try running npm publish it will throw an error
+error = cannot put on the same versiion 
+	so change the version in the pacakge.json file and then run npm publish 
+
+now how to use it -
+	npm i "rambhardwajpackage/common" 
+then 
+	import InputTypes from "rambhardwajpackage/common"
+
+_____________________________________________________________________________________________________________________________
+
+What is d.ts files?
+	It is a file that contains only the types of your code
+
+How to d.ts files?
+	In pacakge.json 
+		include a new key here called "declaration" : true
+	go to common 
+		run tsc now 
+		there will to two files created index.js & index.d.ts
+		index.d.ts just have types 
+	
+_____________________________________________________________________________________________________________________________	 
