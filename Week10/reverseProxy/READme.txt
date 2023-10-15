@@ -63,5 +63,7 @@ Q. Difference between forward proxcies and reverse proxcies
 	see the image "Diff-Forward&Reverse_PROXIES"
 
 Q. What is burp proxcy?
-	
+
+Q. 
+
 
