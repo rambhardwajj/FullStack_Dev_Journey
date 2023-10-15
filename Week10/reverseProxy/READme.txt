@@ -26,7 +26,7 @@
 		So ngineX runs on port 80 whose work is to direct the request to the server based on which url is incomming 
 		frontend.com -> 80 ( ngineXrunning here will direct it to ) -> :5173
 
-		
+
 		events {
 			worker_connections 1024;
 		}
@@ -55,4 +55,13 @@ Steps :-
 	4. sudo rm /./nginex.conf
 	   sudo vi /./nginex.conf
 	5. now in conf file paste your conf file to this file 
-	6.  
+	6. sudo nginex -s reload
+
+SO BASICALLY WE JUST HAVE TO INSTALL THE NGINEX AND EDIT THE FILE AND CONFIGURE IT ACCORDING TO use
+
+Q. Difference between forward proxcies and reverse proxcies 
+	see the image "Diff-Forward&Reverse_PROXIES"
+
+Q. What is burp proxcy?
+	
+
