@@ -24,4 +24,4 @@ STEPS to connect to https server or implement certificate ( end to end encryptio
       certbot entered to the nginx file and modified it 
       and all the req to 80 will be redirected to 443
    
-   ThereFore 
+   ThereFore we ran a command , cammand create a bunch of file in nginx.conf , redirect 80 to 443 
