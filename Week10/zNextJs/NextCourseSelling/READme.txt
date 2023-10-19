@@ -1,4 +1,7 @@
 
+Start NextJs by 
+	npx create-next-app@latest
+
 Changes Made in the course selling app when moved from reactJs to NextJs
 	1. in NextJs we use useRouter to navigate from one page to another 
 	2. in NextJs Authentication is done using cookies not by headers 

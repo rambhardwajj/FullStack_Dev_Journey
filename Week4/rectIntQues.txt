@@ -1,0 +1,75 @@
+1.  Role of React in software develoment?
+Ans. Simplifies the creation of single page application by reusing th component
+
+2.  Differences btw ReactJs and Angular?
+Ans. ReactJs uses virtual DOM 
+	 Angular uses Real DOM
+	 ReactJs is a JS library 
+	 Angular is a UI frameWork
+	 ReactJs is light weight and faster
+	 Angular is heavy 
+	 ReactJs is a library hence developer has to write a lot of code to import 
+	 Angular is a frameWork hence less line of code
+
+3.  What is DOM?
+Ans. It is an interface to make your websites dynamic with the help of JavaScript
+
+4.  Difference between DOM and virtual DOM?
+Ans. In Real DOM whatever change is made in the ui of a web app there is a whole reRender of the page and hence the webpage is slow 
+	 where as in the virtual DOM if the change is made on the ui there is a virtual DOM page where the user see the changes and the 
+	 whole page is not reloaded and hence the virtual DOM is faster than the RealDOM
+
+5.  How virtual DOM is faster?
+Ans. In virtual DOM if you make a change in a component the reRender happens only on the component but not on the full page .
+	 There can be more than one virtual DOM 
+
+6.  What is npm and what is the role of node_modules folder ?
+Ans. npm is node package manager and is used to manage dependencies of the react packages. 
+	 node_modules contains all the library and dependencies of your project. 
+
+7.  Role of public folder ?
+Ans. It contains all the static assests 
+
+8.  Role of src folder?
+Ans. In ReactJs src folder is used to store all the source code of the application and contains all the dynamic files in it 
+
+9.  Role if index.html in ReactJs?
+Ans. When we say react is used to create simgle page application , this is that single page , meaning all the components 
+	 are gonna placed dynamically on this single page only.
+
+10. What is the role of function and return in React? Can a function be without return ?
+Ans. return returns a react component ... yes function can be without a return . 
+
+11. What is ReactDOM?
+Ans. ReactDOM is a react library which converts your component to actual browser DOM.
+	 const root = ReactDOM.createRoot(document.getElementById('root'));
+	 root.render( <App/>);
+
+12. What is jsx?
+Ans. JavaScript XML is a syntax extention used by react to write html like code. 
+
+13. Can browser understand the jsx code ? What is Babel?
+Ans. No, Babel is a transpiler , the jsx code is converted to js code using Babel . Babel is present in node_modules.
+
+14. What are states in React?
+
+15. What are hooks in React?
+
+16. Name some hooks in React
+Ans. useState , useEffect , useContext , useMemo, useCallback
+
+17. What are state management ? Recoil? Redux? 
+
+18. What is prop drilling .
+Ans. When the grand child element of a current element wants to access property of the current element , 
+     the current element has to pass the props to his child and then child to grandchild , 
+	 even if the child doesnt need the props inorder to pass to grandchild the current element has to pass 
+	 the props to his child as well this is prop drilling. 
+
+19. What are the rules that u need to follow while using hooks?
+Ans. 1. You should only call hooks on the highest level . 
+	 2. You should onlu call hooks inside of a functional component.
+
+20. 
+
+
