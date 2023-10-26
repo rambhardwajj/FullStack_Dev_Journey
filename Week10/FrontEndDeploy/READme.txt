@@ -1,11 +1,13 @@
 in server folder in week 10 
 notice in index.js file 
 	app.use(express.static("public"));
+	app.use("/*", (req, res) => {
+		res.sendFile(path.join(__dirname, "/public/index.html"))
+	})
 
 this line means whatever file is in server/public folder you will run on port 3000 of a specific port is not defined 
 and hence our both frontend and backend code will run on the same port 
 hence this eliminates the problem of cors and our backend and frontend can directly communicate with each other
-
 
 
 in frontend folder 
