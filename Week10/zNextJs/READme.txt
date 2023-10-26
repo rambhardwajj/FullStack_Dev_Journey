@@ -12,3 +12,7 @@ SSG
 ISR 
 	Incremental Static Regeneration 
 
+
+NextJs Routhing System is through file system 
+under the src route is where all the route recides 
+
