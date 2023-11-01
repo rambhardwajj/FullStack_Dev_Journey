@@ -17,5 +17,11 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@types/jsonwebtoken": "^9.0.4",
+    "@types/mongoose": "^5.11.97",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.4"
+  }
 }
