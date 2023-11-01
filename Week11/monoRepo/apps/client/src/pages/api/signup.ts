@@ -14,7 +14,8 @@ type Data = {
 export default async  function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
-) {
+) {     
+           console.log("call was made in signup.ts");
     await ensureDbConnected();
     const {username, password} = req.body;
     const admin = await Admin.findOne({username});
