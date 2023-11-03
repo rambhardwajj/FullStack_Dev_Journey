@@ -32,6 +32,7 @@ export const authOptions = {
 				username: { label: "Username", type: "text", placeholder: "jsmith" },
 				password: { label: "Password", type: "password" }
 			},
+			// make sure to make the funtions ensureDbConnected in a file under src/lib folder and write all teh logic of Db there only 
 			async authorize(credentials, req) {
 				await ensureDbConnected()
 				if (!credentials) {
