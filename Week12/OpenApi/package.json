@@ -1,0 +1,15 @@
+{
+  "name": "openapi",
+  "version": "1.0.0",
+  "description": "Problem :-\r If in a product there are many end points in the backend and the company needs to change the name of an end point\r then the frontend also needs to change accordingly hence then this is at times difficult to document .\r This problem is solved by GraphQL , trpc , OpenApi etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "helpful-decorators": "^2.1.0"
+  }
+}
