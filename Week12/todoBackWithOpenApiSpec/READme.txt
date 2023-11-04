@@ -24,4 +24,8 @@ Steps to make openapi specification backend
 		this default service can be exported any where in your backend file and wherever we want to send the request just 
 		add DefaultService.get() and now 
 		whenever you make a change in the endpoints it will complaints 
-		
+		and you can change the end points 
+
+Few Error handling 
+in tsconfig ->  "experimentalDecorators": true  &   
+
