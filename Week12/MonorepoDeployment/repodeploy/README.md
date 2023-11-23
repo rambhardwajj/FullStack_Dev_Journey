@@ -87,8 +87,4 @@ CI/CD files -> yaml files which represent what should happen when a commit takes
 Follow the steps in image wStepsForCiCd and see the video week 9 and week 12 monorepo deploy
 Git hub repo -> https://github.com/100xDevs-hkirat/week-12-monorepo-full/tree/master
 
-
-
-
-
-
+How to serve a react app in production
