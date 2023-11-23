@@ -87,4 +87,13 @@ CI/CD files -> yaml files which represent what should happen when a commit takes
 Follow the steps in image wStepsForCiCd and see the video week 9 and week 12 monorepo deploy
 Git hub repo -> https://github.com/100xDevs-hkirat/week-12-monorepo-full/tree/master
 
-How to serve a react app in production
+<!-- Who will start the workflows? -->
+A. Github will start the workflows 
+
+<!-- How ? -->
+A. Make a folder name .github
+	make a folder workflow in it 
+	 make a file ( yml )  
+	 -> client-next-deploy.yml
+	 -> client-next-deploy.yml
+	 -> client-next-deploy.yml
