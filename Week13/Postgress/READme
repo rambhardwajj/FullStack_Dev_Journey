@@ -1,50 +1,60 @@
-<!-- What is PostgreSQL ? -->
-PostgreSQL is a powerful, open-source object-relational database system. It has a strong reputation for reliability, feature robustness, and extensibility.
 
-<!-- Basics: -->
-What is PostgreSQL?
-How is PostgreSQL different from other relational database management systems?
+<!-- make a repo -->
+npm install pg
+npm install @types/pg
 
-<!-- SQL Queries: -->
-Explain the difference between INNER JOIN and LEFT JOIN in PostgreSQL.
-What is the purpose of the GROUP BY clause in SQL, and how is it used in PostgreSQL?
-Write a query to find the second highest salary in a table.
+<!-- In src folder make a file -->
+	utits.ts 
+		<!-- in this file make a "client" of postgres  -->
+		How? ( see the utils.js file )
+			import Client from pg 
+			then make a function getClient 
+			pass your postgress url as parameter into the Client constructor
+			client.connect();
+			return  client ;
+		
+<!-- In src folder make files to push queries into the db ( see the files ) -->
+	in the files
+		first import getClient function from the utils file 
+		then retrieve the client 
+			const client = await getClient();
+		then make a query to CRUD into the table or make a table etc and then
+		push the query into the pg database :-
+			<!-- making query -->
+			const createUserTableQuery = `
+				CREATE TABLE users (
+					id SERIAL PRIMARY KEY,
+					email VARCHAR(255) UNIQUE NOT NULL,
+					password VARCHAR(255) NOT NULL
+				);
+			`;
+			<!-- for executing query to the database -->
+			await client.query(createUserTableQuery);   
+			
+<!-- Now build the porject  -->
+	npm run build 
+	node dist/create-table.js 
+	<!-- Output -->
+		Table created successfully
 
-<!-- Indexing and Performance: -->
-What is an index in PostgreSQL, and why is it important?
-Explain the concept of query optimization in PostgreSQL.
-How can you improve the performance of a slow PostgreSQL query?
+<!-- Main points  -->
+	to prevent SQL Injection pass the values in .query function as $1 $2 etc   
 
-<!-- Data Types: -->
-What are the different data types supported by PostgreSQL?
-Explain the JSONB data type in PostgreSQL.
 
-<!-- Constraints: -->
-What is a primary key and foreign key? How are they used in PostgreSQL?
-How can you enforce unique constraints on columns in PostgreSQL?
+<!-- Joins -->
+Inner Join => A Intersection B 
+	-> will show only the users that have users and some todos as well 
+Left Join  => A Union B - Only(B)
+	-> will show all the users with their todos if a user dont have any todo then that user will bw shown with null values 
+Right Join => Opposite of left join 
+Full join  => A Union B 
 
-<!-- Database Design: -->
-Explain normalization and denormalization.
-What is the purpose of a surrogate key in database design, and how is it implemented in PostgreSQL?
+<!-- Problem With Sql  -->
+ 1. Difficult to remember the tables 
+ 2. hard to visualize 
+ 3. Have to write raw sql 
+ 4. Migrations are harder 
+ 5. You dont get the best types
 
-<!-- Transactions: -->
-What is a transaction in PostgreSQL, and why is it important?
-Explain the ACID properties in the context of PostgreSQL.
-
-<!-- Administration: -->
-How do you take a backup of a PostgreSQL database?
-Explain the role of the pg_hba.conf file in PostgreSQL.
-What is the purpose of the PostgreSQL autovacuum process?
-
-<!-- Advanced Topics: -->
-Explain the concept of inheritance in PostgreSQL.
-What are stored procedures, and how can they be created in PostgreSQL?
-How does replication work in PostgreSQL, and what are its types?
-
-<!-- Security: -->
-How can you secure a PostgreSQL database?
-Explain the concept of roles and privileges in PostgreSQL.
-
-<!-- Troubleshooting: -->
-How would you approach troubleshooting a slow-performing query in PostgreSQL?
-What steps would you take to recover from a database crash in PostgreSQL?
+<!-- Solution for all the problems? -->
+ A. ORMs 
