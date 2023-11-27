@@ -1,5 +1,5 @@
 <!-- How to setUp postgress on cloud free(just one database) -->
-ElephantSQL
+ElephantSQL  <!-- Or --> go to neon.tech it will give you a free access to a whole postgress database 
 <!-- How to setUp postgress locally -->
 https://www.prisma.io/dataguide/postgresql/setting-up-a-local-postgresql-database#setting-up-postgresql-on-windows
 
