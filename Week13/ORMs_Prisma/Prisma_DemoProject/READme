@@ -15,11 +15,17 @@
 	../ORMs_Prisma/ThreeSteps.png
 	this files is the schema for the model to prisma and with the help of this file prisma will auto generate all the files for you which we just have to run and thats it . I as a developer just have to define the schema properly
 
+ <!-- Model Specifications -->
+	read about the @id @relations @default etc 
 
- <!-- Model Specification -->
-	
-
-	
-
-
+4. After setting up the schema Perform the migration step 
+	<!-- for this command to run you should have a postgres locally   -->
+	<!-- Or -->
+	<!-- You can go to neon.tech and get a full acces to a postgres database for free and paste the url here -->
+	npx prisma migrate dev --name init
+	What this will do ?
+		1. there will be a new folder created in the project named -> migrations
+		2. there will be a file named migration.sql which will contain 
+			all the sql queries automatically generated accourding to your model specifications
+	 	
 
