@@ -1,3 +1,10 @@
+<!-- How to setUp postgress on cloud free(just one database) -->
+ElephantSQL
+<!-- How to setUp postgress locally -->
+https://www.prisma.io/dataguide/postgresql/setting-up-a-local-postgresql-database#setting-up-postgresql-on-windows
+
+
+Setting up the porject 
 
 <!-- make a repo -->
 npm install pg
@@ -58,3 +65,5 @@ Full join  => A Union B
 
 <!-- Solution for all the problems? -->
  A. ORMs 
+
+

@@ -1,0 +1,25 @@
+
+1. Setup the project 
+ <!-- Guide to setup Prisma locally  -->
+	https://www.prisma.io/docs/getting-started/quickstart
+
+2. Model 
+ <!-- see file -Prisma/schema.prisma -->
+	this is a single file where you have all of your schema 
+	schema -> basically what your db looks like. when you are using sql your schema should be well defined 
+	In case of prisma  rather than running the create table command it says jsut tell me your schema upfront 
+	in a specific format and then It will automatically give you the migration file and you can run it 
+
+3. Major three Steps 
+ <!-- see the image -->
+	../ORMs_Prisma/ThreeSteps.png
+	this files is the schema for the model to prisma and with the help of this file prisma will auto generate all the files for you which we just have to run and thats it . I as a developer just have to define the schema properly
+
+
+ <!-- Model Specification -->
+	
+
+	
+
+
+
