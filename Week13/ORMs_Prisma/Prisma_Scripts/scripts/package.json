@@ -1,0 +1,29 @@
+{
+  "name": "week-13-prisma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "prisma": "^5.6.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/100xDevs-hkirat/week-13-prisma.git"
+  },
+  "bugs": {
+    "url": "https://github.com/100xDevs-hkirat/week-13-prisma/issues"
+  },
+  "homepage": "https://github.com/100xDevs-hkirat/week-13-prisma#readme",
+  "description": ""
+}
