@@ -1,0 +1,23 @@
+<!-- This file contains some scripts for the prisma and 
+	I have to follow all the steps mentioned in the website :-
+		https://www.prisma.io/docs/getting-started/quickstart
+	to make this project running file and also 
+	I have to use the url given by the website :-
+		neon.tech 
+	in the env file to migrate the files  -->
+
+Step 0 -> Initialise the project using the steps from the documentation
+Step 1 -> go to tsconfig and search rootdir and the uncomment it and make add ./src to the path 
+			and in the ourdir add ./dist 
+Step 2 -> Make a folder under the root directory of the project and name it src 
+Step 3 -> Start making files in the src directory to create user, create post etc etc
+Step 4 -> tsc -b
+Step 5 -> npx prisma studio 
+			to visualise the data u see
+Step 6 -> while creating the client If you want to see some advance debug of the sql queries u can
+			make the client this way :-
+				const prisma = new PrismaClient({log: ['info', 'query'],})
+Step 7 -> Important functions to create / get  
+			a. obj.user.create() -> make a user 
+			b. obj.user.get() -> gets the user
+			
