@@ -1,0 +1,57 @@
+
+<!-- 0. make a folder and enter the following commands ->  -->
+	npm init -y  npx tsc --init 
+<!-- 1. Make folder structure like this  -->
+	client
+	server
+<!-- 2. Make a file server/trpc.ts  -->
+	and initialise t in it.
+<!-- 3. in trpc.ts we have to export two important global variables  -->
+	router -> similar to app variable inexpress
+	publicProcedure -> it lets u create other procedures 
+<!-- 4. Initialise the server -->
+	in server folder make a new file index.ts 
+	here you will initialise all your procedure 
+	and AppRouter
+
+<!-- 5. Defining a router in index.ts -->
+	const appRouter = router({
+		createTodo : publicProcedure
+			.input(todoInputType)
+			.mutation(async (opts)=>{
+				const title = opts.input.title;
+				const description = opts.input.description;
+
+				 <!-- do DB stuff here  -->
+				return {
+					id : "1"
+				}
+			})
+	});
+
+<!-- 6. Now that we have defined a router we can serve it  -->
+	this is where adapter comes into picture
+	Server the API
+
+	const server = createHTTPServer({
+		router: appRouter,
+	  });
+	   
+	server.listen(3000);
+
+<!-- 7. Now your backend is completed and your backend is running on port 3000 -->
+	under the hood you are using http server but you have to think in such a way that you are making a RPC call , ie a function is being called remotely on the server 
+
+<!-- 8. Now make a client folder  -->
+	now initialise you client in the index.ts file here
+	make any mutation or any query with the help of trpc client 
+
+<!-- 9. Now start your backend and frontend  -->
+	tsc -b
+	node dist/server/index.ts
+	node dist/client/index.ts
+
+___________________________________________________________________________________________________________
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+<!-- Authentication in TRPC -->

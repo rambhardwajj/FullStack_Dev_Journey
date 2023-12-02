@@ -1,0 +1,20 @@
+<!-- TRPC ? -->
+	Typescript Remote Procedure Call
+
+<!-- Remote Procedure Call -->
+	You write your backend, write a bunch of functions in backend ,
+	you go to the frontend and call those functions , you dont have to worry about how teh request happens..
+	but to facilitate this you need a library that autogenerates this frontend code where you can call this functions and also gives you all the tools to write thes backend functions like 
+		createTodo()
+		createUser()
+		deleteUser()
+		etc etc
+	the request happens under the hood 
+
+<!-- Advantages of TRPC -->
+	1. Automatic Types in frontend and backend 
+	2. Generic code that can be converted to Express Backend Or NextJs Backend
+
+<!-- Adapter -->
+	The TRPC code is a typescript generic code which is complied by an adapter that converts it into the tech stack of your choice be it Express or Next and the compiled   code is what served in the internet ie the express or next code not the trpc code
+	
