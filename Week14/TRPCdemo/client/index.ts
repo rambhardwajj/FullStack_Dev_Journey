@@ -14,17 +14,18 @@ const trpc = createTRPCProxyClient<AppRouter>({
 
 async function main(){
 	// check the working of createTodo route 
-	let response = await trpc.createTodo.mutate({
-		title: "ram",
-		description: "yo"
-	})
+	// let response = await trpc.createTodo.mutate({
+	// 	title: "ram",
+	// 	description: "yo"
+	// })
+
 	// check the working of signUp route 
 	let response2 = await trpc.signUp.mutate({
 		email: "ram@gmail.com",
 		password: "123456"
 	})
 
-	console.log( response);
+	// console.log( response);
 	console.log( response2);
 }
 
