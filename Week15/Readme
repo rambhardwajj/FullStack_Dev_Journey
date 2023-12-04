@@ -1,1 +1,52 @@
-DevOps 
+<!-- DevOps Highlevel Whys -->
+	1 how can you make docker container 
+	2 how is it usefull for starting project locally 
+	3 how can you deploy your project using docker 
+
+<!-- How to setup opensource project locally conventially  -->
+	1. git clone 
+	2. install dependency 
+
+<!-- How to setup opensource project locally using docker  -->
+	1. clone that project locally 
+	2. start a command given in the project 
+		this command will start a container ( mini computer OR self contained VM ) on your machine 
+	3. this will install all you dependencies 
+	4. and when you are done you cna stop the container nd then all the resources are free
+
+Company's Developer will make an image and that image can be run on any machine teh same way everywhere. 
+The image actually running is called the container 
+
+<!-- What is an image? -->
+Image is a very big file ( 200 mb etc ).
+Take it like it is a snapshot of the dependecies of a project all together 
+
+<!-- Difference between an Imge and container -->
+1.	Image is a big file that has all the dependencies for the project 
+	Container is an image under execution 
+2.	Image is made once 
+	Containers are created multiple times
+3. 	Image pushed to a docker hub 
+	Containers run on different Ec2/Gcp instances etc 
+__________________________________________________________________________________________________________________________________________________________________________________________
+
+<!-- DOCKER -->
+The Most Popular Container 
+
+<!-- Docker has 3 parts  -->
+	Docker engine -> something that run on your machine , thing that create images on your 
+		machine and run it 
+	Docker CLI -> way to interact to Docker using command line 
+	Docker Hub -> place where images are deployed 
+
+<!-- Workflow  -->
+	The Maintainers will create an Image ( a docker file ) and then 
+	Push it to DockerHub and then 
+	The differenct ec2 instances can pull the image from the docker hub and run it 
+	 using their docker engines. 
+	
+
+<!-- Few Points to note  -->
+1.	Usually the databases are deployed seperately and backend , frontend applications are running on ec2 instances
+2.	Usually you dont start the database using docker , because docker keeps going down ( On and Off ) and u dont want your database going down and data lost 
+3.	Only you upload your frontend and backend code on ec2 instances
