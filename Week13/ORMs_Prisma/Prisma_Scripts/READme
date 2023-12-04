@@ -18,6 +18,9 @@ Step 6 -> while creating the client If you want to see some advance debug of the
 			make the client this way :-
 				const prisma = new PrismaClient({log: ['info', 'query'],})
 Step 7 -> Important functions to create / get  
+        <!-- Read all the files properly  -->
 			a. obj.user.create() -> make a user 
 			b. obj.user.get() -> gets the user
+			c. obj.post.findMany() -> retrieve the required post 
 			
+ 
