@@ -96,3 +96,25 @@ ________________________________________________________________________________
 				docker kill <IdOfContainer>
 
 <!-- People having your image can go to the image and see the source code and hence you should upload binary files or for js some hashed file on docker  -->
+<!-- Frontend are not deployed useing docker , only backend are deployed useing docker in real world -->
+<!-- We build the docker image locally and not on a ec2 instance as this will take a lot of computation power and hence kinda avoided -->
+<!-- In real world there are different backend apis , each backend apis have their seperate dockerfile and these docker file when getting upload in the workflows are moved to the root folder because the dockerfile are supposed to be in the root folder  -->
+
+<!-- Docker Volume  -->
+	It is a place that you create in your docker engine and say that whatever date you put there  you keep it the re volume will keep it alive even if the docker turns off (until we actually kill the volume ) 
+<!-- thing you should know is when an image is build the first place where  data is stored is /data/db folder -->
+
+<!-- How to create a volume in mongo db? -->
+	docker volume create <volumename>
+	docker run -v <volumename>:/data/db -p 27017:27017 mongo 
+
+<!-- Docker Network -->
+	To communicate between different containers. Wvery container is a seperate machine so differenct containers cant cant unless they are connected to a network
+
+<!-- How to create a network? -->
+	docker network create <network_Name>
+	docker run --name <Container_Name> --network <network_Name> -d <nameOfImage> 
+	docker run --name <Container2_Name> --network <network_Name> it busybox sh 
+
+<!-- BusyBox -->
+	this is like sshing into container but this also has few linux command to operate into container machine 
