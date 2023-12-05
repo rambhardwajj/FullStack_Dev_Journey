@@ -1,0 +1,9 @@
+docker version
+docker images 					All images on the machine
+docker ps  						All containers running on your machine ( will show many containers with their ids)
+
+ for debugging 
+docker exec -it <Container_Id> /bin/bash   
+	this command takes you in side the container file ( it is similar to sshing into the machine )
+
+docker kill <container_id> 
