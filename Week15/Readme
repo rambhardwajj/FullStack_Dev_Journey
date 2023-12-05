@@ -50,3 +50,49 @@ The Most Popular Container
 1.	Usually the databases are deployed seperately and backend , frontend applications are running on ec2 instances
 2.	Usually you dont start the database using docker , because docker keeps going down ( On and Off ) and u dont want your database going down and data lost 
 3.	Only you upload your frontend and backend code on ec2 instances
+______________________________________________________________________________________________
+
+<!-- When you have to containerise your application These Are The Steps You Have To Follow -->
+	1. Add a docker file week-15/part1-simple-node-app/Dockerfile
+	2. Create the image and start the container
+		docker build -t <Name_of_the_image> . 
+		docker images (for confirmation )
+		docker run -p 3000:3000 <Name_of_the_image>
+		 
+<!-- Docker Layers -->
+	Suppose you have to make a container
+	you have a docker file which has 4 commands 
+	the docker engine will start from the top and it 
+	will start to make these LAYERS 
+	the reason why these layers are created is because a lot of times these layers can be cashed 
+	Building docker is verytime consuming step 
+	the bottom layer images changes very rarely , so it is very usefull to cache these to save time
+<!-- Basically for saving build operations these layers are made which can be cashed to save the operations -->
+
+
+<!-- Grabbing images from dockerhub -->
+	docker run -d -p 27017:27017 mongo 
+		this will start mongodb locally
+		here -p is port mapping 
+		here -d id detached mode ( run it in backgraound)
+		by changing the ports number you can start different mongodb instances locally 
+
+<!-- How to push an image to dockerHub -->
+	Step 1 -> login to docker hub
+	Step 2 -> On windows search for docker desktop and double click and start the docker engine 
+	Step 3 -> Open dockerHub and login 
+	Step 4 -> make a new repository, give it a name 
+	Step 5 -> cd to the docker project where the docker file exist 
+	Step 6 -> open terminal  ( login to docker )
+				docker login 
+	Step 7 -> build docker image 
+				docker build -t rambhardwaj1010/test11 .     ( here rambhardwaj1010/test11 is the repo name of docker hub  ) 
+	Step 8 -> push image
+				docker push rambhardwaj1010/test11
+	Step 9 -> run the image locally 
+				docker run -p 3002:3000 rambhardwaj1010/test11
+	Step 10-> end the process
+				docker ps 
+				docker kill <IdOfContainer>
+
+<!-- People having your image can go to the image and see the source code and hence you should upload binary files or for js some hashed file on docker  -->
