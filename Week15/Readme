@@ -88,6 +88,8 @@ ________________________________________________________________________________
 		here -d id detached mode ( run it in backgraound)
 		by changing the ports number you can start different mongodb instances locally 
 
+
+
 <!-- How to push an image to dockerHub -->
 	Step 1 -> login to docker hub
 	Step 2 -> On windows search for docker desktop and double click and start the docker engine 
@@ -118,9 +120,10 @@ ________________________________________________________________________________
 <!-- How to create a volume in mongo db? -->
 	docker volume create <volumename>
 	docker run -v <volumename>:/data/db -p 27017:27017 mongo 
+			whenever mongo container starts the place where it puts all the data is the /data/db of the container  
 
 <!-- Docker Network -->
-	To communicate between different containers. Wvery container is a seperate machine so differenct containers cant cant unless they are connected to a network
+	To communicate between different containers. Every container is a seperate machine so differenct containers cant cant unless they are connected to a network
 
 <!-- How to create a network? -->
 	docker network create <network_Name>
@@ -129,3 +132,7 @@ ________________________________________________________________________________
 
 <!-- BusyBox -->
 	this is like sshing into container but this also has few linux command to operate into container machine 
+
+<!-- Docker Compose file -->
+see image 
+	When u use a docker compose file , u want the user to run a single command that starts mongo , starts app, etc etc 
