@@ -50,13 +50,24 @@ The Most Popular Container
 1.	Usually the databases are deployed seperately and backend , frontend applications are running on ec2 instances
 2.	Usually you dont start the database using docker , because docker keeps going down ( On and Off ) and u dont want your database going down and data lost 
 3.	Only you upload your frontend and backend code on ec2 instances
+
+<!-- DockerFile -->
+File that describe your image 
+	steps to write a docker image :-
+		1. first line of the docker file is your base image 
+			eg Nodejs base image ( it represent popular image of machine like ubuntu or ubuntu + nodejs [node js ])
+		2. All software to install 
+		3. Copy over the file you want to be present in the container ( your frontend code or your backend code )
+		4. build the project ( npm i , npm run build , )
+		5. expose write set of ports 
+		6. start the process
 ______________________________________________________________________________________________
 
 <!-- When you have to containerise your application These Are The Steps You Have To Follow -->
 	1. Add a docker file week-15/part1-simple-node-app/Dockerfile
 	2. Create the image and start the container
 		docker build -t <Name_of_the_image> . 
-		docker images (for confirmation )
+		docker images (for confirmation)
 		docker run -p 3000:3000 <Name_of_the_image>
 		 
 <!-- Docker Layers -->
@@ -64,7 +75,7 @@ ________________________________________________________________________________
 	you have a docker file which has 4 commands 
 	the docker engine will start from the top and it 
 	will start to make these LAYERS 
-	the reason why these layers are created is because a lot of times these layers can be cashed 
+	the reason why these layers are created is because a lot of times these layers can be cashed .
 	Building docker is verytime consuming step 
 	the bottom layer images changes very rarely , so it is very usefull to cache these to save time
 <!-- Basically for saving build operations these layers are made which can be cashed to save the operations -->
@@ -82,7 +93,7 @@ ________________________________________________________________________________
 	Step 2 -> On windows search for docker desktop and double click and start the docker engine 
 	Step 3 -> Open dockerHub and login 
 	Step 4 -> make a new repository, give it a name 
-	Step 5 -> cd to the docker project where the docker file exist 
+	Step 5 -> now come back to your editor and   cd to the docker project where the docker file exist 
 	Step 6 -> open terminal  ( login to docker )
 				docker login 
 	Step 7 -> build docker image 
@@ -101,7 +112,7 @@ ________________________________________________________________________________
 <!-- In real world there are different backend apis , each backend apis have their seperate dockerfile and these docker file when getting upload in the workflows are moved to the root folder because the dockerfile are supposed to be in the root folder  -->
 
 <!-- Docker Volume  -->
-	It is a place that you create in your docker engine and say that whatever date you put there  you keep it the re volume will keep it alive even if the docker turns off (until we actually kill the volume ) 
+	It is a place that you create in your docker engine and say that whatever data you put there you keep it  the volume will keep it alive even if the docker turns off (until we actually kill the volume ) 
 <!-- thing you should know is when an image is build the first place where  data is stored is /data/db folder -->
 
 <!-- How to create a volume in mongo db? -->
@@ -114,7 +125,7 @@ ________________________________________________________________________________
 <!-- How to create a network? -->
 	docker network create <network_Name>
 	docker run --name <Container_Name> --network <network_Name> -d <nameOfImage> 
-	docker run --name <Container2_Name> --network <network_Name> it busybox sh 
+	docker run --name <Container2_Name> --network <network_Name> it busybox sh <nameOfImage>
 
 <!-- BusyBox -->
 	this is like sshing into container but this also has few linux command to operate into container machine 
